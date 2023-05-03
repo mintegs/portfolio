@@ -7,7 +7,7 @@ import ArticleCard from './cards/articleCard'
 const Articles = () => {
   return (
     <div
-      className='flex flex-col items-center min-h-screen pt-[7rem] pb-0 px-0 md:px-6'
+      className='section'
       id='articles'
     >
       <motion.div

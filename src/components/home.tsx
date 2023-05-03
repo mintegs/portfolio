@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <motion.div
-      className='flex flex-col items-center min-h-screen pt-[7rem] pb-0 px-0 md:px-6'
+      className='section'
       id='home'
       initial={{ y: -15, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
