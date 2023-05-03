@@ -10,6 +10,10 @@ export default function Home() {
     <>
       <Head>
         <title>{asPath === '/' ? 'Mintegs' : asPath.replace('/#', '')}</title>
+        <meta
+          name='description'
+          content='My personal website'
+        />
       </Head>
       <Main />
     </>

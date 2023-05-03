@@ -15,13 +15,13 @@ const Navbar = () => {
     {
       url: 'https://instagram.com/mohamadresaaa',
       icon: (
-        <FaInstagram className='cursor-pointer text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />
+        <FaInstagram className='cursor-pointer w-5 h-5 text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />
       ),
     },
     {
       url: 'https://github.com/mohamadresaaa',
       icon: (
-        <FaGithub className='cursor-pointer text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />
+        <FaGithub className='cursor-pointer w-5 h-5 text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />
       ),
     },
   ]

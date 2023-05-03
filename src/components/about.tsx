@@ -39,6 +39,7 @@ const About = () => {
         >
           <motion.img
             src='https://avatars.githubusercontent.com/u/41260098?v=4'
+            alt='mohamadresa'
             className='object-cover w-full h-full'
             whileHover={{ y: -48, x: -55 }}
             transition={{ duration: 0.3 }}
