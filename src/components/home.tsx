@@ -37,7 +37,7 @@ const Home = () => {
         <h3 className='text-white text-xl md:text-[2rem]'>
           Hi, I'm <span className='text-[#38efcd]'>MohamadResa</span>{' '}
         </h3>
-        <span className='text-white text-center text-[3rem] lg:text-[5rem] leading-[1.3] mt-8'>
+        <span className='text-white text-center text-[2.5rem] lg:text-[5rem] leading-[1.3] mt-8'>
           Passionate
           <br /> to craft innovative <br /> web products.
         </span>
