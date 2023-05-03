@@ -1,9 +1,17 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { NextPageContext } from 'next'
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document'
 
-export default function Document() {
+const MyDocument = ({ locale }: NextPageContext) => {
   return (
-    <Html lang="en">
+    <Html lang={locale?.replace('us', 'en')}>
       <Head />
+
       <body>
         <Main />
         <NextScript />
@@ -11,3 +19,14 @@ export default function Document() {
     </Html>
   )
 }
+
+MyDocument.getInitialProps = async (ctx: DocumentContext) => {
+  const initialProps = await Document.getInitialProps(ctx)
+
+  return {
+    ...initialProps,
+    locale: ctx?.locale || 'fa',
+  }
+}
+
+export default MyDocument

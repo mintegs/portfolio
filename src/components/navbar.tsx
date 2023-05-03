@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { i18n, useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BsMedium } from 'react-icons/bs'
@@ -6,6 +7,7 @@ import { FaDribbble, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 
 const Navbar = () => {
+  const { t } = useTranslation()
   const [scroll, setScroll] = useState(false)
   const [toggle, setToggle] = useState(false)
 
@@ -91,7 +93,7 @@ const Navbar = () => {
                 key={index}
               >
                 <Link href={`${navlink === 'home' ? '/' : `/#${navlink}`}`}>
-                  {navlink}
+                  {t(navlink)}
                 </Link>
               </li>
             )
@@ -121,7 +123,9 @@ const Navbar = () => {
           />
         </div>
         <motion.div
-          className='w-16 h-16 fixed rounded-[50%] right-0 top-0 bg-slate-800'
+          className={`${
+            i18n?.language === 'fa' ? 'left-0' : 'right-0'
+          } w-16 h-16 fixed rounded-[50%] top-0 bg-slate-800`}
           variants={menuVariants}
           initial='hidden'
           animate={toggle ? 'visible' : 'hidden'}
@@ -133,9 +137,9 @@ const Navbar = () => {
           className={`text-white fixed w-full flex items-center justify-center flex-col h-screen left-0 top-8`}
         >
           <HiX
-            className={`${
-              toggle ? 'flex' : 'hidden'
-            } cursor-pointer w-10 h-10 absolute right-10 top-8`}
+            className={`${toggle ? 'flex' : 'hidden'} ${
+              i18n?.language === 'fa' ? 'left-10' : 'right-10'
+            } cursor-pointer w-10 h-10 absolute top-8`}
             onClick={() => setToggle(false)}
           />
 
@@ -152,7 +156,7 @@ const Navbar = () => {
                   href={`${navlink === 'home' ? '/' : `#${navlink}`}`}
                   onClick={() => setToggle(false)}
                 >
-                  {navlink}
+                  {t(navlink)}
                 </Link>
               </li>
             )

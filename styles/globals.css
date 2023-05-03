@@ -16,6 +16,14 @@
   }
 }
 
+html[lang='fa'] {
+  direction: rtl;
+}
+
+html[lang='en'] {
+  direction: ltr;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
