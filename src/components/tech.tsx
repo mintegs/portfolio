@@ -163,8 +163,8 @@ const Tech = () => {
         <span className='text-lg md:text-2xl capitalize tracking-widest text-[#38efcd]'>
           What I Expert?
         </span>
-        <h1 className='text-[1.5rem] md:text-[3rem] capitalize'>
-          Skill in technologies and frameworks
+        <h1 className='text-[.8rem] md:text-[3rem] capitalize'>
+          Skills technologies & frameworks
         </h1>
       </motion.div>
       <motion.div
