@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({ user }: { user: any }) {
   const { asPath, pathname } = useRouter()
   return (
     <>
@@ -15,22 +15,21 @@ export default function Home() {
           content='My personal website'
         />
       </Head>
-      <Main />
+      <Main user={user} />
     </>
   )
 }
 
-// export async function getStaticProps(context: any) {
-//   console.log(context)
-//   // Call an external API endpoint to get posts
-//   // const res = await fetch('https://.../posts')
-//   // const posts = await res.json()
+export async function getStaticProps() {
+  const response = await fetch('https://api.github.com/users/mohamadresaaa', {
+    headers: {
+      authorization: `Bearer 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`,
+    },
+  }).then((response) => response.json())
 
-//   // By returning { props: { posts } }, the Blog component
-//   // will receive `posts` as a prop at build time
-//   return {
-//     props: {
-//       // posts,
-//     },
-//   }
-// }
+  return {
+    props: {
+      user: response,
+    },
+  }
+}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaPaperPlane, FaTelegram } from 'react-icons/fa'
 
-const About = () => {
+const About = ({ avatar, email }: { avatar: string; email: string }) => {
   const information = [
     {
       icon: <FaTelegram />,
@@ -11,9 +11,10 @@ const About = () => {
     {
       icon: <FaPaperPlane />,
       key: 'Email',
-      value: 'mohamadresaaa@gmail.com',
+      value: email,
     },
   ]
+
   return (
     <div
       className='section'
@@ -38,7 +39,7 @@ const About = () => {
           className='md:max-w-[350px] md:h-[350px] justify-self-center shadow-[0_0_20px_#38efcd] rounded-[5px] bg-[#38efcd]'
         >
           <motion.img
-            src='https://avatars.githubusercontent.com/u/41260098?v=4'
+            src={avatar}
             alt='mohamadresa'
             className='object-cover w-full h-full'
             whileHover={{ y: -48, x: -55 }}

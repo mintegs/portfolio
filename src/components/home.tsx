@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-const Home = () => {
+const Home = ({ avatar }: { avatar: string }) => {
   const moveVariants = {
     animation: {
       y: [0, -15],
@@ -29,7 +29,7 @@ const Home = () => {
           width={240}
           height={240}
           className='w-full h-full object-cover rounded-[50%]'
-          src='https://avatars.githubusercontent.com/u/41260098?v=4'
+          src={avatar}
           alt='mohamadresaaa'
         />
       </div>
