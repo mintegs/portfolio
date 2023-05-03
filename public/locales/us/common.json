@@ -3,5 +3,21 @@
   "home": "home",
   "about": "about",
   "skills": "skills",
-  "articles": "articles"
+  "articles": "articles",
+  "sections": {
+    "home": {
+      "mohamadresa": "mohamadresa",
+      "hi_im": "hi, i'm",
+      "subTitle": {
+        "passionate": "passionate",
+        "to_craft_innovative": "to craft innovative",
+        "web_products": "web_products"
+      },
+      "words": {
+        "frontend_developer": "frontend developer",
+        "backend_developer": "backend developer",
+        "freelancer": "freelancer"
+      }
+    }
+  }
 }

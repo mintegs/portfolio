@@ -3,5 +3,21 @@
   "home": "صفحه اصلی",
   "about": "درباره من",
   "skills": "مهارت‌ها",
-  "articles": "مقالات"
+  "articles": "مقالات",
+  "sections": {
+    "home": {
+      "mohamadresa": "محمدرصا",
+      "hi_im": "سلام من",
+      "subTitle": {
+        "passionate": "علاقه‌مند",
+        "to_craft_innovative": "به ساخت محصولات",
+        "web_products": "نوآورانه وب"
+      },
+      "words": {
+        "frontend_developer": "توسعه دهنده فرانت",
+        "backend_developer": "توسعه دهنده بک‌اند",
+        "freelancer": "فریلنسر"
+      }
+    }
+  }
 }
