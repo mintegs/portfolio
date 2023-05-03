@@ -11,7 +11,7 @@ const About = ({ avatar, email }: { avatar: string; email: string }) => {
     {
       icon: <FaPaperPlane />,
       key: 'Email',
-      value: email,
+      value: 'mohamadresaaa@gmail.com',
     },
   ]
 
@@ -39,7 +39,7 @@ const About = ({ avatar, email }: { avatar: string; email: string }) => {
           className='md:max-w-[350px] md:h-[350px] justify-self-center shadow-[0_0_20px_#38efcd] rounded-[5px] bg-[#38efcd]'
         >
           <motion.img
-            src={avatar}
+            src='https://avatars.githubusercontent.com/u/41260098?v=4'
             alt='mohamadresa'
             className='object-cover w-full h-full'
             whileHover={{ y: -48, x: -55 }}

@@ -1,7 +1,26 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
-const Home = ({ avatar }: { avatar: string }) => {
+const Home = () => {
+  const [user, setUser] = useState<any>(null)
+
+  const getUser = async () => {
+    const response = await fetch('https://api.github.com/users/mohamadresaaa', {
+      headers: {
+        authorization: `Bearer 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`,
+      },
+    }).then((response) => response.json())
+
+    // update the state
+    setUser(response)
+  }
+
+  useEffect( () => {
+    getUser()
+    console.log('user', user)
+  }, [])
+
   const moveVariants = {
     animation: {
       y: [0, -15],
@@ -29,7 +48,7 @@ const Home = ({ avatar }: { avatar: string }) => {
           width={240}
           height={240}
           className='w-full h-full object-cover rounded-[50%]'
-          src={avatar}
+          src='https://avatars.githubusercontent.com/u/41260098?v=4'
           alt='mohamadresaaa'
         />
       </div>

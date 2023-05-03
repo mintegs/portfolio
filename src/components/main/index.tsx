@@ -13,7 +13,7 @@ const Main = ({ user }: { user: any }) => {
       before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-2 after:translate-y-full after:bg-gradient-conic  after:blur-2xl after:content-[''] before:bg-gradient-to-br before:from-transparent before:to-blue-700/10 after:from-sky-900 after:via-[#0141ff]/40 before:lg:h-[360px]"
         ></div>
         <Navbar />
-        <Home avatar={user.avatar_url} />
+        <Home />
         <About
           avatar={user?.avatar_url}
           email={user?.email}
