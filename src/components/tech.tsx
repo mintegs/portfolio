@@ -170,7 +170,7 @@ const Tech = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
-        className='grid grid-cols-2 md:grid-cols-4 mx-auto max-w-3xl gap-y-8 gap-x-2 md:gap-y-16 justify-center'
+        className='grid grid-cols-3 md:grid-cols-4 mx-auto max-w-3xl gap-y-8 gap-x-2 md:gap-y-16 justify-center'
       >
         {list.map((item) => {
           return (

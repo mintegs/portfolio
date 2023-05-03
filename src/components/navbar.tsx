@@ -45,6 +45,7 @@ const Navbar = () => {
       },
     },
   }
+
   const navLinkVariants = {
     hidden: {
       display: 'none',
@@ -129,27 +130,25 @@ const Navbar = () => {
         <motion.div
           variants={navLinkVariants}
           animate={toggle ? 'visible' : 'hidden'}
-          className='text-white fixed w-full flex items-center justify-center flex-col h-screen left-0 top-8'
+          className={`text-white fixed w-full flex items-center justify-center flex-col h-screen left-0 top-8`}
         >
           <HiX
-            className='cursor-pointer w-10 h-10 absolute right-10 top-8'
+            className={`${
+              toggle ? 'flex' : 'hidden'
+            } cursor-pointer w-10 h-10 absolute right-10 top-8`}
             onClick={() => setToggle(false)}
           />
+
           {navLinks.map((navlink, index) => {
             return (
               <li
                 className='mt-4 list-none'
                 key={index}
               >
-                {/* <a
-                  className='no-underline uppercase text-white text-2xl opacity-60 transition-all duration-[0.3s] ease-[ease] hover:opacity-100'
-                  href={`#${navlink}`}
-                  onClick={() => setToggle(false)}
-                >
-                  {navlink}
-                </a> */}
                 <Link
-                  className='no-underline uppercase text-white text-2xl opacity-60 transition-all duration-[0.3s] ease-[ease] hover:opacity-100'
+                  className={`${
+                    toggle ? 'flex' : 'hidden'
+                  } no-underline uppercase text-white text-2xl opacity-60 transition-all duration-[0.3s] ease-[ease] hover:opacity-100`}
                   href={`${navlink === 'home' ? '/' : `#${navlink}`}`}
                   onClick={() => setToggle(false)}
                 >
