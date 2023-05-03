@@ -164,7 +164,7 @@ const Tech = () => {
           What I Expert?
         </span>
         <h1 className='text-[1.5rem] md:text-[3rem] capitalize'>
-          Skills And Experience
+          Skill in technologies and frameworks
         </h1>
       </motion.div>
       <motion.div
