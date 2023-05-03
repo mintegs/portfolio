@@ -50,7 +50,7 @@ const About = () => {
           whileInView={{ y: [80, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p className='text-base max-w-[450px] mb-4'>
+          <p className='md:text-base text-sm max-w-[450px] mb-4'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
             at rem, tenetur ad ipsa sequi, optio eius laudantium vero minus
             maxime laborum est et nemo consequatur nostrum distinctio sed, nulla
