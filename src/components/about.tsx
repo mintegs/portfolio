@@ -1,22 +1,14 @@
 import { motion } from 'framer-motion'
-import { FaPaperPlane, FaPhoneAlt, FaUser } from 'react-icons/fa'
+import { FaPaperPlane, FaTelegram } from 'react-icons/fa'
 
 const About = () => {
   const information = [
     {
-      id: 1,
-      icon: <FaUser />,
-      key: 'Name',
-      value: 'Mohamadresa',
+      icon: <FaTelegram />,
+      key: 'Telegram',
+      value: '@mintegs',
     },
     {
-      id: 2,
-      icon: <FaPhoneAlt />,
-      key: 'Phone',
-      value: '+98912 142 5458',
-    },
-    {
-      id: 3,
       icon: <FaPaperPlane />,
       key: 'Email',
       value: 'mohamadresaaa@gmail.com',
@@ -64,11 +56,11 @@ const About = () => {
             maxime laborum est et nemo consequatur nostrum distinctio sed, nulla
             doloribus officiis ea eligendi explicabo.
           </p>
-          {information.map((bio) => {
+          {information.map((bio, index) => {
             return (
               <div
-                className='flex text-[1rem] max-w-[300px] mb-4 last:mb-0'
-                key={bio.id}
+                className='flex text-[1rem] max-w-[300px] mb-2 last:mb-0'
+                key={index}
               >
                 <span className='flex items-center font-medium gap-2 mr-5 md:mr-12'>
                   {bio.icon}
