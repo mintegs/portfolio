@@ -65,7 +65,7 @@ const Home = () => {
         <span
           className={`${
             i18n?.language === 'fa'
-              ? 'text-[1rem] leading-[1.8] md:text-[2.5rem] md:leading-[1.3]'
+              ? 'text-[1.3rem] leading-[1.8] md:text-[2.5rem] md:leading-[1.3]'
               : 'text-[2.5rem] leading-[1.3]'
           } text-white text-center lg:text-[5rem] mt-8`}
         >
