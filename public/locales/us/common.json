@@ -11,13 +11,20 @@
       "subTitle": {
         "passionate": "passionate",
         "to_craft_innovative": "to craft innovative",
-        "web_products": "web_products"
+        "web_products": "web products"
       },
       "words": {
         "frontend_developer": "frontend developer",
         "backend_developer": "backend developer",
         "freelancer": "freelancer"
       }
+    },
+    "about": {
+      "title": "who am i",
+      "subTitle": "about me",
+      "bio": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandaeat rem, tenetur ad ipsa sequi, optio eius laudantiumvero minusmaxime laborum est et nemo consequaturnostrumdistinctio sed, nulla doloribus officiis ea eligendi explicabo",
+      "email": "email",
+      "telegram": "telegram"
     }
   }
 }

@@ -2,8 +2,7 @@ import { motion } from 'framer-motion'
 import { i18n, useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { BsMedium } from 'react-icons/bs'
-import { FaDribbble, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaInstagram } from 'react-icons/fa'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 
 const Navbar = () => {
@@ -26,13 +25,6 @@ const Navbar = () => {
         <FaGithub className='cursor-pointer w-5 h-5 text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />
       ),
     },
-  ]
-
-  const socialIcons = [
-    <FaDribbble className='cursor-pointer text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />,
-    ,
-    <FaLinkedin className='cursor-pointer text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />,
-    <BsMedium className='cursor-pointer text-white opacity-60 transition-[0.3s] z-[5] hover:opacity-100' />,
   ]
 
   const menuVariants = {
@@ -106,7 +98,7 @@ const Navbar = () => {
                 href={item.url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='ml-4'
+                className='ml-4 last:ml-0'
                 key={index}
               >
                 {item.icon}
