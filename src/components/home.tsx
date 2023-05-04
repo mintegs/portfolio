@@ -45,7 +45,7 @@ const Home = () => {
         delay: 0.5,
       }}
     >
-      <div className='w-[110px] h-[110px]'>
+      <div className='w-[150px] h-[150px]'>
         <Image
           width={240}
           height={240}
@@ -55,7 +55,7 @@ const Home = () => {
         />
       </div>
       <div className='flex flex-col items-center relative mt-4'>
-        <h3 className='text-white text-xl md:text-[2rem] capitalize'>
+        <h3 className='text-white text-lg md:text-[2rem] capitalize'>
           {t('sections.home.hi_im')}{' '}
           <span className='text-[#38efcd]'>
             {t('sections.home.mohamadresa')}
@@ -65,7 +65,7 @@ const Home = () => {
         <span
           className={`${
             i18n?.language === 'fa'
-              ? 'text-[1.6rem] leading-[1.8] md:text-[2.5rem] md:leading-[1.3]'
+              ? 'text-[1.5rem] leading-[1.8] md:text-[2.5rem] md:leading-[1.3]'
               : 'text-[2.5rem] leading-[1.3]'
           } text-white text-center lg:text-[5rem] mt-8`}
         >
