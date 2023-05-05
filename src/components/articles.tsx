@@ -36,7 +36,7 @@ const Articles = () => {
           </motion.div>
         </div>
         <div
-          className={`-mt-20 pb-14 sm:px-16 px-6 flex flex-wrap gap-7 bg-neutral-900 bg-opacity-40 rounded-b-md`}
+          className={`-mt-48 md:-mt-20 pb-14 sm:px-16 px-6 flex flex-wrap gap-7 bg-neutral-900 bg-opacity-40 rounded-b-md`}
         >
           {[1, 2, 3].map((item, index) => (
             <ArticleCard

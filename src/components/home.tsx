@@ -1,27 +1,11 @@
 import { motion } from 'framer-motion'
 import { i18n, useTranslation } from 'next-i18next'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Home = () => {
   const { t } = useTranslation()
   const [user, setUser] = useState<any>(null)
-
-  const getUser = async () => {
-    const response = await fetch('https://api.github.com/users/mohamadresaaa', {
-      headers: {
-        authorization: `Bearer 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`,
-      },
-    }).then((response) => response.json())
-
-    // update the state
-    setUser(response)
-  }
-
-  useEffect(() => {
-    getUser()
-    console.log('user', user)
-  }, [])
 
   const moveVariants = {
     animation: {

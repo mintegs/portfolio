@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { i18n, useTranslation } from 'next-i18next'
+import Link from 'next/link'
 import { FaPaperPlane, FaTelegram } from 'react-icons/fa'
 
 const About = ({ avatar, email }: { avatar: string; email: string }) => {
@@ -8,7 +9,7 @@ const About = ({ avatar, email }: { avatar: string; email: string }) => {
     {
       icon: <FaTelegram />,
       key: 'telegram',
-      value: '@https://t.me/moonsjs',
+      value: 'moonsjs',
     },
     {
       icon: <FaPaperPlane />,
@@ -59,7 +60,7 @@ const About = ({ avatar, email }: { avatar: string; email: string }) => {
         <motion.div
           className='text-white bg-slate-400 rounded-md bg-opacity-20 flex flex-col px-6 py-4 md:p-4 mt-8'
           initial={{ x: 0, opacity: 0 }}
-          whileInView={{ y: [80, 0], opacity: 1 }}
+          whileInView={{ y: [70, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
           <p className='md:text-base text-sm max-w-[450px] mb-4'>
@@ -79,7 +80,17 @@ const About = ({ avatar, email }: { avatar: string; email: string }) => {
                   {bio.icon}
                   {t(`sections.about.${bio.key}`)}
                 </span>
-                <span>{bio.value}</span>
+                {bio.key === 'telegram' ? (
+                  <Link
+                    href={`https://t.me/${bio.value}`}
+                    className='hover:text-blue-400'
+                    target='_blank'
+                  >
+                    {bio.value}
+                  </Link>
+                ) : (
+                  <span>{bio.value}</span>
+                )}
               </div>
             )
           })}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { HiOutlineClock } from 'react-icons/hi'
-
+import { i18n } from "next-i18next"
 const ArticleCard = ({ index }: { index: number }) => {
   return (
     <motion.div
@@ -47,7 +47,9 @@ const ArticleCard = ({ index }: { index: number }) => {
 
           <span className='flex justify-center items-center text-sm font-medium px-3 py-1 text-gray-300'>
             5 min ago
-            <HiOutlineClock className='h-5 w-5 ml-2' />
+            <HiOutlineClock
+              className={`h-5 w-5 ${i18n?.language === 'fa' ? 'mr-2' : 'ml-2'}`}
+            />
           </span>
         </div>
       </div>
