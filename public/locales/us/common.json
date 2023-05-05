@@ -25,6 +25,14 @@
       "bio": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandaeat rem, tenetur ad ipsa sequi, optio eius laudantiumvero minusmaxime laborum est et nemo consequaturnostrumdistinctio sed, nulla doloribus officiis ea eligendi explicabo",
       "email": "email",
       "telegram": "telegram"
+    },
+    "tech": {
+      "title": "what i expert?",
+      "subTitle": {
+        "technologies": "technologies",
+        "&": "&",
+        "frameworks": "frameworks"
+      }
     }
   }
 }

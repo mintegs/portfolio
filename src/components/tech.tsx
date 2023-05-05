@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useTranslation } from 'next-i18next'
 import { FaCss3, FaHtml5, FaNodeJs, FaReact, FaSass } from 'react-icons/fa'
 import {
   SiJavascript,
@@ -18,7 +18,7 @@ import {
 } from 'react-icons/tb'
 
 const Tech = () => {
-  const [active, setActive] = useState(1)
+  const { t } = useTranslation()
   const list = [
     {
       name: 'html',
@@ -161,11 +161,14 @@ const Tech = () => {
         className='my-5 text-center'
       >
         <span className='text-lg md:text-2xl capitalize tracking-widest text-[#38efcd]'>
-          What I Expert?
+          {t('sections.tech.title')}
         </span>
         <h1 className='text-[1.3rem] md:text-[3rem] leading-6 md:leading-[4rem] capitalize'>
-          technologies
-          <br />&<br /> frameworks
+          {t('sections.tech.subTitle.technologies')}
+          <br />
+          {t('sections.tech.subTitle.&')}
+          <br />
+          {t('sections.tech.subTitle.frameworks')}
         </h1>
       </motion.div>
       <motion.div
