@@ -10,7 +10,20 @@ import Document, {
 const MyDocument = ({ locale }: NextPageContext) => {
   return (
     <Html lang={locale?.replace('us', 'en')}>
-      <Head />
+      <Head>
+        <link
+          rel='manifest'
+          href='/manifest.json'
+        />
+        <link
+          rel='apple-touch-icon'
+          href='/icon-192x192.png'
+        ></link>
+        <link
+          rel='shortcut icon'
+          href='/logo.ico'
+        />
+      </Head>
 
       <body>
         <Main />
